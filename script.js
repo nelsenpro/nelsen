@@ -129,25 +129,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('currentYear').textContent = currentYear;
 });
 
-function copyToClipboard(elementId) {
-            var text = document.getElementById(elementId).innerText;
-            var textarea = document.createElement("textarea");
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textarea);
-
-            var alertBox = document.getElementById("alert-box");
-            alertBox.innerText = "Teks telah disalin: " + text;
-            alertBox.style.display = "block";
-            setTimeout(function () {
-                alertBox.style.opacity = "1";
-            }, 10);
-            setTimeout(function () {
-                alertBox.style.opacity = "0";
-                setTimeout(function () {
-                    alertBox.style.display = "none";
-                }, 500);
-            }, 3000);
-        }
