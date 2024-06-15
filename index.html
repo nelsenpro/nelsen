@@ -19,8 +19,8 @@
                 <ul>
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#proyek">Proyek</a></li>
-                    <li><a id="contactLink" href="#kontak">Kontak</a></li> <!-- Tambahkan ID contactLink di sini -->
-                    <li><a href="support.html">Dukungan</a></li>
+                    <li><a id="contactLink" href="#kontak">Kontak</a></li>
+                    <li><a id="supportLink" href="https://nelsenpro.github.io/nelsen/support.html">Dukungan</a></li>
                 </ul>
             </nav>
         </div>
@@ -171,7 +171,7 @@
             Swal.fire({
                 title: 'Nelsen Niko',
                 html: '<p>Halo! Aku Nelsen Niko, aku menyukai bahasa pemrograman dan pengembangan perangkat lunak. Aku telah berhasil membuat dan mengembangkan berbagai proyek yang inovatif dan bermanfaat bagi web developer ataupun web designer.</p>',
-                 icon: 'success',
+                icon: 'success',
                 confirmButtonText: 'Tutup'
             });
 
@@ -194,9 +194,12 @@
             }
         });
     </script>
-    
-    <style>
-      
-    </style>
+
+    <script>
+        document.getElementById('supportLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah tautan dibuka di tab yang sama
+            window.open(this.href, '_blank'); // Membuka tautan di tab baru
+        });
+    </script>
 </body>
 </html>
