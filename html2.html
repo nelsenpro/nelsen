@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelsen Niko - Pengembang & Kontributor Open Source</title>
+
+    <meta name="description" content="Portofolio resmi Nelsen Niko: pengembang web antusias & kontributor aktif proyek open source (Frame.css, Fonia.css, CodeCanvas.js, MyQR). Jelajahi inovasi saya!">
+    <meta name="keywords" content="Nelsen Niko, pengembang perangkat lunak, open source, front-end developer, CSS Framework, JavaScript Library, Frame.css, Fonia.css, CodeCanvas.js, MyQR, portofolio developer, web development, pengembangan web, kontributor teknologi, website Nelsen Niko">
+    <meta name="author" content="Nelsen Niko">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.nelsenniko.com/"> <meta property="og:title" content="Nelsen Niko - Pengembang & Kontributor Open Source">
+    <meta property="og:description" content="Portofolio resmi Nelsen Niko: pengembang web antusias & kontributor aktif proyek open source (Frame.css, Fonia.css, CodeCanvas.js, MyQR). Jelajahi inovasi saya!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nelsenniko.com/"> <meta property="og:image" content="https://www.nelsenniko.com/og-image.jpg"> <meta property="og:locale" content="id_ID">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nelsenniko"> <meta name="twitter:creator" content="@nelsenniko"> <meta name="twitter:title" content="Nelsen Niko - Pengembang & Kontributor Open Source">
+    <meta name="twitter:description" content="Portofolio resmi Nelsen Niko: pengembang web antusias & kontributor aktif proyek open source (Frame.css, Fonia.css, CodeCanvas.js, MyQR). Jelajahi inovasi saya!">
+    <meta name="twitter:image" content="https://www.nelsenniko.com/twitter-image.jpg"> <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*
+         * --- CSS Variabel & Reset ---
+         */
+:root {
+            --primary-blue: #007bff;
+            --secondary-gray: #6c757d;
+            --success-green: #28a745;
+            --danger-red: #dc3545;
+            --warning-yellow: #ffc107;
+            --info-cyan: #17a2b8;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --body-bg: #ffffff;
+            --header-footer-bg: #343a40;
+            --nav-link-color: #ffd700;
+            --accent-magenta: #ff00ff;
+            --accent-cyan: #00ffff;
+
+            --primary-blue-hover: #0056b3;
+            --info-cyan-hover: #117a8b;
+            --success-green-hover: #218838;
+            --danger-red-hover: #c82333;
+            --warning-yellow-hover: #e0a800;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /*
+         * --- Utility Classes ---
+         */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .text-primary {
+            color: var(--primary-blue);
+        }
+        .text-secondary {
+            color: var(--secondary-gray);
+        }
+        .text-success {
+            color: var(--success-green);
+        }
+        .text-danger {
+            color: var(--danger-red);
+        }
+        .text-warning {
+            color: var(--warning-yellow);
+        }
+        .text-info {
+            color: var(--info-cyan);
+        }
+        .text-dark {
+            color: var(--dark-text);
+        }
+        .text-light {
+            color: var(--light-bg);
+        }
+        .text-accent-magenta {
+            color: var(--accent-magenta);
+        }
+        .text-accent-cyan {
+            color: var(--accent-cyan);
+        }
+        .text-nav-link {
+            color: var(--nav-link-color);
+        }
+
+        .bg-primary {
+            background-color: var(--primary-blue);
+        }
+        .bg-secondary {
+            background-color: var(--secondary-gray);
+        }
+        .bg-success {
+            background-color: var(--success-green);
+        }
+        .bg-danger {
+            background-color: var(--danger-red);
+        }
+        .bg-warning {
+            background-color: var(--warning-yellow);
+        }
+        .bg-info {
+            background-color: var(--info-cyan);
+        }
+        .bg-dark {
+            background-color: var(--dark-text);
+        }
+        .bg-light {
+            background-color: var(--light-bg);
+        }
+
+        /*
+         * --- Header & Navigation ---
+         */
+        .main-header {
+            background-color: var(--header-footer-bg);
+            color: var(--light-bg);
+            padding: 1.25rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .main-header .brand-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .main-header .brand-subtitle {
+            font-size: 1rem;
+            color: var(--secondary-gray);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .main-nav ul li a {
+            color: var(--nav-link-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.25rem 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav ul li a:hover,
+        .main-nav ul li a:focus {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+
+        /*
+         * --- Sections Umum ---
+         */
+        .content-section {
+            padding: 3rem 0;
+            flex-grow: 1;
+        }
+
+        .content-section:nth-of-type(even) {
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.15rem;
+            color: var(--secondary-gray);
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*
+         * --- Welcome Section (Beranda) ---
+         */
+        #beranda {
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        #beranda .welcome-text {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /*
+         * --- Project Section (Portofolio) ---
+         */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--body-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: var(--secondary-gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-card .link-button {
+            margin-top: auto;
+            text-align: center;
+            width: fit-content;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /*
+         * --- Call to Action Button (reusable) ---
+         */
+        .btn-action {
+            display: inline-block;
+            padding: 0.75rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-blue-hover);
+            transform: translateY(-2px);
+        }
+        .btn-info {
+            background-color: var(--info-cyan);
+            color: white;
+        }
+        .btn-info:hover {
+            background-color: var(--info-cyan-hover);
+            transform: translateY(-2px);
+        }
+        .btn-success {
+            background-color: var(--success-green);
+            color: white;
+        }
+        .btn-success:hover {
+            background-color: var(--success-green-hover);
+            transform: translateY(-2px);
+        }
+        .btn-danger {
+            background-color: var(--danger-red);
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: var(--danger-red-hover);
+            transform: translateY(-2px);
+        }
+        .btn-warning {
+            background-color: var(--warning-yellow);
+            color: var(--dark-text);
+        }
+        .btn-warning:hover {
+            background-color: var(--warning-yellow-hover);
+            transform: translateY(-2px);
+        }
+
+        /*
+         * --- Footer ---
+         */
+        .main-footer {
+            background-color: var(--header-footer-bg);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+
+        .main-footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .main-footer .datetime-info {
+            color: var(--nav-link-color);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /*
+         * --- SweetAlert2 Custom Styling ---
+         */
+        .swal2-popup {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--dark-text);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .swal2-title {
+            color: var(--dark-text);
+            font-weight: 700;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .swal2-html-container {
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--secondary-gray);
+        }
+
+        .swal2-html-container a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .swal2-html-container a:hover {
+            color: var(--dark-text);
+            text-decoration: underline;
+        }
+
+        .swal2-confirm.swal2-styled {
+            background-color: var(--primary-blue) !important;
+            color: white !important;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+        .swal2-confirm.swal2-styled:hover {
+            background-color: var(--primary-blue-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        .payment-methods {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .payment-methods li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--light-bg);
+            padding: 0.8rem 1.2rem;
+            border-radius: 6px;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .payment-methods h4 {
+            font-size: 1.1em;
+            margin: 0;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .payment-methods p {
+            font-size: 0.9em;
+            margin: 0;
+            color: var(--dark-text);
+            font-weight: 400;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background-color: var(--info-cyan);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--info-cyan-hover);
+            transform: translateY(-1px);
+        }
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+
+        /*
+         * --- Responsiveness ---
+         */
+@media (max-width: 768px) {
+            .main-header .brand-title {
+                font-size: 2rem;
+            }
+
+            .main-nav ul {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+
+            .content-section {
+                padding: 2rem 0;
+            }
+
+            .project-card {
+                padding: 1.5rem;
+            }
+
+            .project-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-methods li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .copy-btn {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'">
+
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="brand-title text-accent-cyan">Nelsen Niko</h1>
+            <p class="brand-subtitle text-secondary">
+                Pengembang & Kontributor Open Source
+            </p>
+            <nav class="main-nav" aria-label="Navigasi Utama">
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a id="contactLink" href="#" role="button" aria-haspopup="dialog" aria-controls="contactDialog">Kontak</a></li>
+                    <li><a id="supportLink" href="#" role="button" aria-haspopup="dialog" aria-controls="supportDialog">Dukungan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="content-section">
+            <div class="container">
+                <h2 class="section-title text-dark">Selamat Datang di Nelsen Niko</h2>
+                <p class="section-description welcome-text">
+                    👋 Halo! Saya **Nelsen Niko**, seorang **Pengembang Web** kreatif dan **Kontributor Open Source** yang bersemangat dalam membangun pengalaman digital yang inovatif. Saya fokus menciptakan solusi web yang cepat, estetis, dan mudah digunakan.
+                </p>
+                <p class="section-description text-accent-magenta">
+                    Jelajahi portofolio ini untuk melihat proyek-proyek saya yang berdampak. Mari berkolaborasi menciptakan hal hebat! 🚀
+                </p>
+            </div>
+        </section>
+
+        <section id="proyek" class="content-section">
+            <div class="container">
+                <h2 class="section-title text-primary">Proyek Utama</h2>
+                <p class="section-description">
+                    Jelajahi beberapa proyek open source yang telah saya kembangkan dan kontribusikan.
+                </p>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3 class="text-success">Frame.css</h3>
+                        <p>
+                            **Frame.css** adalah proyek open-source yang menyediakan beragam **library CSS** untuk mendesain aplikasi web dan website dengan mudah dan stylish.
+                        </p>
+                        <a href="https://github.com/nelsenpro/framecss" class="btn-action btn-primary" target="_blank" rel="noopener noreferrer">Selengkapnya...</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 class="text-info">Fonia.css</h3>
+                        <p>
+                            **Fonia.css** adalah kumpulan pustaka CSS kecil dan ringan yang digunakan untuk mewarnai font/teks, latar belakang, perataan teks, dan jenis font untuk desain web. Ini adalah proyek lain dari saya, seorang pengembang **CSS Framework Indonesia**.
+                        </p>
+                        <a href="https://github.com/nelsenpro/fonia" class="btn-action btn-info" target="_blank" rel="noopener noreferrer">Selengkapnya...</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 class="text-danger">CodeCanvas.js</h3>
+                        <p>
+                            **cc.js** atau **CodeCanvas.js** adalah pustaka **JavaScript ringan** yang memungkinkan Anda menjalankan JavaScript dan menerapkan gaya secara dinamis dalam dokumen HTML menggunakan tag "cc".
+                        </p>
+                        <a href="https://github.com/nelsenpro/cc" class="btn-action btn-warning" target="_blank" rel="noopener noreferrer">Selengkapnya...</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3 class="text-primary">MyQR</h3>
+                        <p>
+                            **MyQR** adalah generator kode QR yang dibangun dengan **HTML, CSS, dan JavaScript murni**, memungkinkan Anda membuat kode QR dari berbagai jenis data dengan mudah.
+                        </p>
+                        <a href="https://github.com/nelsenpro/myqr" class="btn-action btn-success" target="_blank" rel="noopener noreferrer">Selengkapnya...</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="lainnya" class="content-section">
+            <div class="container">
+                <h2 class="section-title text-info">Proyek & Kontribusi Lainnya</h2>
+                <p class="section-description">
+                    Selain proyek-proyek utama di atas, saya juga aktif berkontribusi pada berbagai inisiatif open source dan mengembangkan alat-alat kecil yang bermanfaat.
+                </p>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3 class="text-primary">BikinSandi</h3>
+                        <p>
+                            Generator kata sandi super aman dan mudah digunakan, membantu Anda membuat sandi yang kuat untuk menjaga keamanan akun Anda.
+                        </p>
+                        <a href="https://example.com/bikinsandi" class="btn-action btn-primary" target="_blank" rel="noopener noreferrer">Coba Sekarang</a>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="text-info">Kamus Dayak</h3>
+                        <p>
+                            Kamus interaktif yang bertujuan melestarikan bahasa lokal Dayak, memungkinkan pengguna untuk mencari dan belajar kosakata.
+                        </p>
+                        <a href="https://example.com/kamusdayak" class="btn-action btn-info" target="_blank" rel="noopener noreferrer">Eksplor Bahasa</a>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="text-success">Simulasi Bunga</h3>
+                        <p>
+                            Alat untuk menghitung simulasi bunga deposito sesuai dengan aturan dan standar bank di Indonesia.
+                        </p>
+                        <a href="https://example.com/simulasibunga" class="btn-action btn-success" target="_blank" rel="noopener noreferrer">Hitung di Sini</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>
+                &copy; <span id="currentYear"></span> Nelsen Niko. Hak Cipta Dilindungi.
+            </p>
+            <span class="datetime-info" id="currentDateTime"></span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer async></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactLink = document.getElementById('contactLink');
+            const supportLink = document.getElementById('supportLink');
+            const currentYearSpan = document.getElementById('currentYear');
+            const currentDateTimeSpan = document.getElementById('currentDateTime');
+
+            // Set current year
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Function to update date and time
+            function updateDateTime() {
+                if (currentDateTimeSpan) {
+                    const now = new Date();
+                    const options = {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: false
+                    };
+                    currentDateTimeSpan.textContent = now.toLocaleDateString('id-ID', options);
+                }
+            }
+
+            // Update date and time initially and every second
+            updateDateTime();
+            const dateTimeInterval = setInterval(updateDateTime, 1000);
+
+            // Ensure intervals are cleared on page unload to prevent memory leaks (optional for single page)
+            window.addEventListener('beforeunload', () => {
+                clearInterval(dateTimeInterval);
+            });
+
+            // Helper function to handle copy functionality
+            function setupCopyButtonsInSwal(htmlContainer) {
+                const copyButtons = htmlContainer.querySelectorAll('.copy-btn');
+                copyButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const textToCopy = button.dataset.copy;
+                        navigator.clipboard.writeText(textToCopy).then(() => {
+                            Swal.fire({
+                                toast: true,
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Disalin!',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                timerProgressBar: true
+                            });
+                        }).catch(err => {
+                            console.error('Gagal menyalin teks: ', err);
+                            Swal.fire({
+                                toast: true,
+                                position: 'top-end',
+                                icon: 'error',
+                                title: 'Gagal menyalin!',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                timerProgressBar: true
+                            });
+                        });
+                    });
+                });
+            }
+
+            // SweetAlert2 functions
+            function showContactInfo() {
+                // Only load SweetAlert2 if it's available (check for global variable)
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        title: 'Hubungi Saya',
+                        html: `
+                        <p>Tertarik untuk berkolaborasi atau hanya ingin menyapa?</p>
+                        <p>Anda bisa menghubungi saya melalui:</p>
+                        <ul class="payment-methods" style="list-style: none; padding: 0;">
+                        <li>
+                        <h4>WhatsApp</h4>
+                        <div>
+                        <p>+62 822-5407-1678</p>
+                        <button class="copy-btn" data-copy="6282254071678">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>Email</h4>
+                        <div>
+                        <p>nelsenniko7@gmail.com</p>
+                        <button class="copy-btn" data-copy="nelsenniko7@gmail.com">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>GitHub</h4>
+                        <div>
+                        <p>github.com/nelsenpro</p>
+                        <button class="copy-btn" data-copy="https://github.com/nelsenpro">Salin</button>
+                        </div>
+                        </li>
+                        </ul>
+                        `,
+                        icon: 'info',
+                        confirmButtonText: 'Tutup',
+                        customClass: {
+                            popup: 'swal2-popup',
+                            title: 'swal2-title',
+                            htmlContainer: 'swal2-html-container',
+                            confirmButton: 'swal2-confirm swal2-styled'
+                        },
+                        didOpen: () => {
+                            setupCopyButtonsInSwal(Swal.getHtmlContainer());
+                        }
+                    });
+                } else {
+                    console.warn('SweetAlert2 is not loaded. Cannot show contact info.');
+                    alert('Kontak Nelsen Niko:\nWhatsApp: +62 822-5407-1678\nEmail: nelsenniko7@gmail.com\nGitHub: github.com/nelsenpro');
+                }
+            }
+
+            function showSupportInfo() {
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        title: 'Dukung Proyek Saya',
+                        html: `
+                        <p>Dukungan Anda sangat berarti untuk pengembangan proyek open source saya!</p>
+                        <p>Anda bisa memberikan dukungan melalui:</p>
+                        <ul class="payment-methods">
+                        <li>
+                        <h4>DANA</h4>
+                        <div>
+                        <p>082254071678</p>
+                        <button class="copy-btn" data-copy="082254071678">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>Gopay</h4>
+                        <div>
+                        <p>082254071678</p>
+                        <button class="copy-btn" data-copy="082254071678">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>Bank BCA</h4>
+                        <div>
+                        <p>1900010991901</p>
+                        <button class="copy-btn" data-copy="1900010991901">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>Bank BRI</h4>
+                        <div>
+                        <p>1234567890</p>
+                        <button class="copy-btn" data-copy="1234567890">Salin</button>
+                        </div>
+                        </li>
+                        <li>
+                        <h4>PayPal</h4>
+                        <div>
+                        <p>nelsen.niko@example.com</p>
+                        <button class="copy-btn" data-copy="nelsen.niko@example.com">Salin</button>
+                        </div>
+                        </li>
+                        </ul>
+                        `,
+                        icon: 'success',
+                        confirmButtonText: 'Tutup',
+                        customClass: {
+                            popup: 'swal2-popup',
+                            title: 'swal2-title',
+                            htmlContainer: 'swal2-html-container',
+                            confirmButton: 'swal2-confirm swal2-styled'
+                        },
+                        didOpen: () => {
+                            setupCopyButtonsInSwal(Swal.getHtmlContainer());
+                        }
+                    });
+                } else {
+                    console.warn('SweetAlert2 is not loaded. Cannot show support info.');
+                    alert('Dukung Nelsen Niko:\nDANA/Gopay: 082254071678\nBCA: 1900010991901\nBRI: 1234567890\nPayPal: nelsen.niko@example.com');
+                }
+            }
+
+            // Attach event listeners
+            if (contactLink) {
+                contactLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showContactInfo();
+                });
+            }
+
+            if (supportLink) {
+                supportLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSupportInfo();
+                });
+            }
+        });
+    </script>
+
+    <style type="text/css" media="all">
+        /* style.css atau di dalam <style> tag */
+        .highlighted-text {
+            color: #FF5733;
+            /* Contoh: Warna teks oranye */
+            font-weight: bold;
+            /* Contoh: Membuat teks tebal */
+            font-style: italic;
+            /* Contoh: Membuat teks miring */
+            text-decoration: underline;
+            /* Contoh: Memberi garis bawah pada teks */
+            /* Anda bisa menambahkan properti CSS lainnya di sini: */
+            /* font-size: 1.1em; */
+            /* background-color: yellow; */
+            /* padding: 2px 4px; */
+            /* border-radius: 3px; */
+        }
+
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+        // script.js atau di dalam <script> tag sebelum penutup </body>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pilih semua elemen yang mungkin mengandung teks yang ingin diformat.
+            // Misalnya, paragraf (p), atau heading (h1-h6).
+            const elementsToProcess = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+
+            elementsToProcess.forEach(element => {
+                let originalContent = element.innerHTML;
+
+                // Gunakan Regular Expression untuk mencari teks yang diapit oleh **
+                // Regex: /\*\*(.*?)\*\*/g
+                // \*\* : Mencocokkan dua tanda bintang literal (perlu di-escape)
+                // (.*?)       : Mencocokkan karakter apapun (kecuali baris baru) nol atau lebih kali,
+                //               secara 'non-greedy' (penting agar tidak melewati ** berikutnya)
+                // g           : Flag 'global', agar regex mencari semua kecocokan dalam string, bukan hanya yang pertama
+                const modifiedContent = originalContent.replace(/\*\*(.*?)\*\*/g, '<span class="highlighted-text">$1</span>');
+
+                // Ganti konten asli elemen dengan konten yang sudah dimodifikasi
+                element.innerHTML = modifiedContent;
+            });
+        });
+
+    </script>
+</body>
+</html>
